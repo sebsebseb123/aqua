@@ -1,0 +1,115 @@
+body{
+  padding-top: 40px;
+  font-family:"Alegreya Sans", sans-serif;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+h1{
+  font-size: 34px;
+  color:#2E93BE;
+  text-align:left;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+h2{
+  font-size: 18px;
+  color:#fff;
+  text-align: left;
+  line-height: 25px;
+  font-weight: 200;
+}
+
+h4{
+  font-size: 25px;
+  text-align:center;
+  color:#333;
+  letter-spacing: 1px;
+}
+
+h5{
+  font-size: 50px;
+  text-align:center;
+  color: #2D92BE ;
+}
+
+.line {
+  background-image: url('images/lines.png');
+  height: 17px;
+}
+
+/**
+ * Header
+ */
+header {
+  margin-bottom: 25px;
+}
+
+/**
+ * Logo
+ */
+.logo a img{
+  float: left;
+  max-height: 100px;
+  max-width: 350px;
+  padding-right: 100px;
+}
+
+/**
+ * Menu
+ */
+nav.menu{
+  padding: 0px;
+}
+
+.nav{
+  padding-top: 50px;
+}
+
+.nav.nav-pills li{
+  border-bottom: 1px solid #666;
+  margin-left: 30px;
+}
+
+.nav-pills li a{
+  padding: 0px;
+  line-height: 32px;
+  color: #666;
+  text-align: left;
+  width: 120px;
+}
+
+.nav-pills li a:hover{
+  color:#2E93BE;
+  background-color: #fff;
+}
+
+/**
+ * Content
+ */
+.content{
+  padding-top: 30px;
+}
+
+/**
+ * Footer
+ */
+footer {
+  padding-top: 10px;
+  background-color: #666;
+}
+

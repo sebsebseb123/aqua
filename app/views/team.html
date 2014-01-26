@@ -1,0 +1,33 @@
+<div class="portfolio">
+  <div class="row wide">
+    <div class="row centered body" ng-show="page.body">
+      <div ng-bind-html="page.body" class="col-md-12 col-xs-12"></div>
+    </div>
+    <div class="row centered">
+      <div ng-repeat="study in page.caseStudies" ng-class="{active: (activeCase == $index), 'col-md-12': true, 'case-study': true}" ng-click="setActiveCase($index)">
+        <div class="col-md-4 col-xs-4 sidebar">
+          <div class="col-md-12 title">
+            <h3>{{study.title}}</h3>
+          </div>
+          <div class="description">
+            <div class="body col-md-12" ng-bind-html="study.body"></div>
+          </div>
+        </div>
+        <div class="col-md-8 col-xs-8 image-viewport">
+          <button type="button" class="pull-right close" aria-hidden="true" ng-click="removeActiveCase($event)">&times;</button>
+          <div class="col-md-12 col-xs-12 active-images row">
+            <div ng-repeat="image in study.images" ng-bind-html="image" ng-class="{active: (activeCaseImage[$parent.$index] == $index), 'col-md-12': true, 'active-image': true}" ng-click="setActiveImage($parent.$index, $index + 1)"></div>
+          </div>
+          <div class="col-md-12 col-xs-12 image-titles row">
+            <div ng-repeat="title in study.imageTitles track by $index" ng-class="{'active-title': (activeCaseImage[$parent.$index] == $index), 'image-title': true}">
+              {{title}}
+            </div>
+          </div>
+          <div class="col-md-12 col-xs-12 thumbs row">
+            <div class="col-md-2 col-xs-2 thumb" ng-repeat="image in study.images" ng-bind-html="image" ng-click="setActiveImage($parent.$index, $index)"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

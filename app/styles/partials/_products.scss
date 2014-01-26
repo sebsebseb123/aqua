@@ -1,0 +1,41 @@
+.box {
+  height: 350px;
+}
+
+.box h4{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.box p{
+  padding: 20px;
+}
+
+.box.mission{
+  border: none;
+  p {
+    padding: 0px;
+    font-size: 22px;
+    color:#333;
+    text-align:left;
+    line-height: 32px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+  }
+}
+
+.box.mission h1{
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.borderbox{
+  border: 1px solid #222;
+}
+
+.product p {
+  font-size: 15px;
+  text-align:left;
+  line-height: 22px;
+  letter-spacing: 1px;
+}

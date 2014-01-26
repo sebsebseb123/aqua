@@ -1,0 +1,28 @@
+<div class="contact">
+  <div class="paragraph">
+    <div class="row wide">
+      <div class="row centered">
+        <form class="col-md-6" role="form" ng-submit="addNewContact()" ng-hide="contactSent">
+          <div class="email field form-group">
+            <label for="contact-email-field">Email</label>
+            <input ng-model="user.email" ng-disabled="contactSending" type="email" class="form-control" id="contact-email-field" name="contact-email-field" placeholder="Enter your email address" />
+          </div>
+          <div class="message field form-group">
+            <label for="contact-message-field">Message</label>
+            <textarea ng-model="user.message" ng-disabled="contactSending" class="form-control" rows="15" id="contact-message-field" name="contact-message-field"></textarea>
+          </div>
+          <div class="submit field form-group">
+            <button type="submit" class="btn btn-default pull-right">Send</button>
+            <div class="loading pull-right" ng-show="contactSending"></div>
+          </div>
+        </form>
+        <div class="thank-you col-md-6" ng-show="contactSent">
+          <h5>Message sent!</h5>
+        </div>
+        <div class="info col-md-6">
+          <div ng-bind-html="page.body" class="paragraph"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
