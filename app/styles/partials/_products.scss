@@ -1,15 +1,14 @@
 .box {
   margin-bottom: 30px;
-}
+  h4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  p{
+    padding: 20px;
+  } 
+}  
 
-.box h4{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.box p{
-  padding: 20px;
-}
 
 .box.mission{
   border: none;
@@ -35,17 +34,19 @@
   max-height: 100%;
 }
 
-.product p {
-  font-size: 15px;
-  text-align:left;
-  line-height: 22px;
-  letter-spacing: 1px;
+.product{
+  .product p {
+    font-size: 15px;
+    text-align:left;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+  .product img{
+    height: 120px; 
+    width: auto;
+  }
 }
 
-.product img{
-  height: 120px; 
-  width: auto;
-}
 
 .more {
   margin-right: 30px;
