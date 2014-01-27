@@ -35,28 +35,13 @@ angular.module('getter.directives', [])
             }
           },
           'sustainability': {
-            'url': 'http://designbykubo.com/_drupal/portfolio?callback=JSON_CALLBACK',
+            'url': 'http://dev-aquagreens.gotpantheon.com/api/sustainability.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.body = data[0].body;
-              pageData.caseStudies = [];
-              for (var i = 0; i < data.length; i++) {
-                // Create tmp var.
-                var caseStudy = {};
-                caseStudy.title = data[i].title;
-                caseStudy.body = data[i].body_1;
-                caseStudy.images = data[i].nothing.split('||||');
+              pageData = data[0];
+              pageData.vimeo = "http://player.vimeo.com/video/" + pageData.vimeo;
 
-                // Get image titles.
-                caseStudy.imageTitles = [];
-                for (var j = 0; j < caseStudy.images.length; j++) {
-                  caseStudy.imageTitles[j] = $(caseStudy.images[j]).attr('title');
-                }
-
-                // Add tmp var to pageData.
-                pageData.caseStudies.push(caseStudy);
-              }
               // Then return it.
               return pageData;
             }
