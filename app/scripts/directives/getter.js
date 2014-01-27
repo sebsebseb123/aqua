@@ -18,11 +18,18 @@ angular.module('getter.directives', [])
         // Set config object, with urls and parsers.
         var config = {
           'products': {
-            'url': 'http://designbykubo.com/_drupal/about?callback=JSON_CALLBACK',
+            'url': 'http://dev-aquagreens.gotpantheon.com/api/products.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
+              // Check for empty thumbnails.
+              for (var i = data.length - 1; i >= 0; i--) {
+                if (typeof data[i].thumbnail !== 'string') {
+                  data[i].thumbnail = '';
+                }
+              };
+
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.about_bodies = data[0].field_about_body.split('&lt;&lt;&gt;&gt;');
+              pageData.boxes = data;
               // Then return it.
               return pageData;
             }
