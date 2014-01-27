@@ -1,33 +1,33 @@
-<div class="portfolio">
-  <div class="row wide">
-    <div class="row centered body" ng-show="page.body">
-      <div ng-bind-html="page.body" class="col-md-12 col-xs-12"></div>
-    </div>
-    <div class="row centered">
-      <div ng-repeat="study in page.caseStudies" ng-class="{active: (activeCase == $index), 'col-md-12': true, 'case-study': true}" ng-click="setActiveCase($index)">
-        <div class="col-md-4 col-xs-4 sidebar">
-          <div class="col-md-12 title">
-            <h3>{{study.title}}</h3>
-          </div>
-          <div class="description">
-            <div class="body col-md-12" ng-bind-html="study.body"></div>
-          </div>
-        </div>
-        <div class="col-md-8 col-xs-8 image-viewport">
-          <button type="button" class="pull-right close" aria-hidden="true" ng-click="removeActiveCase($event)">&times;</button>
-          <div class="col-md-12 col-xs-12 active-images row">
-            <div ng-repeat="image in study.images" ng-bind-html="image" ng-class="{active: (activeCaseImage[$parent.$index] == $index), 'col-md-12': true, 'active-image': true}" ng-click="setActiveImage($parent.$index, $index + 1)"></div>
-          </div>
-          <div class="col-md-12 col-xs-12 image-titles row">
-            <div ng-repeat="title in study.imageTitles track by $index" ng-class="{'active-title': (activeCaseImage[$parent.$index] == $index), 'image-title': true}">
-              {{title}}
-            </div>
-          </div>
-          <div class="col-md-12 col-xs-12 thumbs row">
-            <div class="col-md-2 col-xs-2 thumb" ng-repeat="image in study.images" ng-bind-html="image" ng-click="setActiveImage($parent.$index, $index)"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="col-md-8">
+  <div class="box">
+    <img src="../images/top.jpg">
+    <h1>Mission</h1>
+    <h2>Aqua Greens believes that to be truly sustainable we must treat people, resources, environment and communities as our most valuable assets we have.</h2> 
+    <p>Our company is dedicated to making our city a better place to live both today and for years to come. Our mission and to enhance and empower our communities with fresh and local products while protecting our natural resources and reducing our environmental impact.</p> 
+    <p>Through aquaponics, we can harvest fresh, locally grown organics greens and herbs such as arugula, basil, lettuce and mint to name a few.  The benefits of our system reduces water consumption by about 90% of conventional farming methods.  Aquaponic roots are submerged in water 100% of the time allowing them to receive constant nutrients resulting in plants that grow bigger, faster and healthier than plants grown in soil.</p>
+  </div>
+
+
+  <div class="box">
+    <img src="../images/top.jpg">
+    <h1>Vision</h1>
+    <h2></h2> 
+    <p>Aqua Greens vision is to become leaders in sustainable food production by producing more with less. We are passionate and dedicated about connecting people and communities with food through aquaponics.  We will strive to be environmentally, socially and economically responsible in every aspect of our business.   We want to engage and inspire people and communities to live healthy, more vibrant lives and to meet current needs without compromising the future of generations to come.</p>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="box">
+    <img src="../images/growers.jpg">
+    <h1>Meet the Growers</h1>
+    <h2>AquaGreens</h2>
+    <p>Craig and Pablo have a combined 40 years experience in the food industry and are both graduates of the Sustainable Energy and building Technology program at Humber. In their last year of school they designed and constructed an aquaponic system and since then have collaborated and worked alongside industry experts and consultants. Craig and Pablo are passionate and dedicated to providing fresh locally grown produce and fish for their community.</p>
+  </div>
+
+  <div class="box">
+    <img src="">
+    <h1>Jim Gill</h1>
+    <h2>Aqua Growers</h2>
+    <p>Jim is the founder and President of Aqua Growers.  His enthusiasm and expertise in this field along with his visions is what led him to start this new and exciting company.  Jim's career started in aviation as an Engineer, and has been part of several lucrative companies, but his calling and dream of wanting to bring to fruition a company that is able to provide a sustainable source of food not only for the State of Michigan, but expanding further by taking this vision to impoverished areas where food source is almost non-existent.  It is this huge dream - a vision beyond anything anyone can see which Jim wants to see come to light, to help those in need - to give back to communities where food is so desperately needed in today's society. Jim Gill has extensive experience in Hydroponics and Aquaponics spanning over 7 years.</p>
   </div>
 </div>
