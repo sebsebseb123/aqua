@@ -1,5 +1,10 @@
 # Apache Configuration File
 
+AuthType Basic
+AuthName "AquaGreens.ca"
+AuthUserFile /kunden/homepages/42/d118153295/htpasswd
+Require valid-user
+
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
