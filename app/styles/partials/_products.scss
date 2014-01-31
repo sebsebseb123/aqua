@@ -6,13 +6,15 @@
   }
   p{
     padding: 20px;
+    font-weight: 200;
+
   } 
 }  
 
 
 .box.mission{
   border: none;
-  p {
+  h2 {
     padding: 0px;
     font-size: 22px;
     color:#333;
@@ -21,6 +23,23 @@
     font-family: 'Roboto Slab', serif;
     font-weight: 200;
   }
+  p{
+    padding: 0px;
+  } 
+  ul{
+    padding-left: 0px;
+  li{
+    list-style: none;
+    display: inline;
+    float: left;
+    text-indent: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    padding-right: 20px;
+    text-transform: uppercase;
+  }
+}
 }
 
 .box.mission h1{
