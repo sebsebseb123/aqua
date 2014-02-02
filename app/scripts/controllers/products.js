@@ -10,7 +10,6 @@ angular.module('aquagreensApp')
     // Get data, and fire event when ready.
     getter.getData($scope, 'products');
 
-
     // Add functionality to switch
     $scope.switchFeatured = function(index) {
       if ($scope.page.boxes[index].type === 'product') {

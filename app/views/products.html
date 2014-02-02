@@ -13,7 +13,7 @@
 </div>
 
   <div class="box col-md-4" ng-repeat="box in page.boxes" ng-class="[box.type, box.title]">
-    <div class="borderbox" ng-click="switchFeatured($index)">
+    <div class="borderbox" ng-click="switchFeatured(box.path)">
       <h4 ng-show="box.type == 'product'">{{box.title}}</h4>
       <span ng-bind-html="box.thumbnail"></span>
       <span ng-bind-html="box.summary"></span>

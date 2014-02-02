@@ -37,10 +37,9 @@ angular.module('getter.directives', [])
               // Create indexed object.
               var boxes = {};
               for (i = data.length - 1; i >= 0; i--) {
-                if (data[i].type === 'product') {
-                  var path = data[i].title.toLowerCase().trim().replace(' ', '-');
-                  boxes[path + ''] = data[i];
-                }
+                var path = data[i].title.toLowerCase().trim().replace(' ', '-');
+                data[i].path = path;
+                boxes[path + ''] = data[i];
               }
               // Reset pageData object, then set it up.
               pageData = {};
