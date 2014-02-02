@@ -1,52 +1,21 @@
-      <div class="mission box col-md-8">
-        <h1> Every harvest is always nutrient rich premium quality produce. </h1>
-        <h2>It is the result of plants root having access to nutrients 24 hours allows them to grow faster. Vegetables such as lettuce and herbs which takes approximately 2 months to mature when planted normally in soil have been proven to mature in approximately one month when grown in aquaponics systems.</h2>
-      </div>
-
-      <div class="mission box col-md-8">
-        <h1> Tilapia </h1>
-        <h2>/təˈläpēə/ An African freshwater cichlid fish that has been widely introduced to many areas for food.</h2>
-        <p>Tilapia is a warm water, fresh water fish farmed in a few locations in Canada. The flesh is white, moist and mild-flavoured and, as such, versatile for cooking in a variety of menus. Tilapia is chosen for sustainable methods of farming for its availability year round, rapid growth rates, large size and ability to convert feed very effectively into body mass. Their production requires minimal access to water as it can be produced in high densities in land-based systems with relatively little water turnover.</p>
-
-        <p>Tilapia can make up more than 15% of our daily nutritional requirement in a single serving  and can help boost the activity of white blood cells, which defend the body against toxins and foreign bodies.</p>
-        <ul>
-          <br>
-        <li>Omega-3</li><li>Phosphorous</li><li>Selenium</li>
-        </ul>
-      </div>
+  <div class="mission box col-md-8">
+    <h1>{{page.featured.title}}</h1>
+    <span ng-bind-html="page.featured.body"></span>
+    <ul>
+      <li ng-repeat="fact in page.featured.quickFacts">{{fact}}</li>
+    </ul>
+  </div>
 
   <div class="product box col-md-4">
-        <div class="box">
-          <img src="images/tilapiabig.jpg">
-          <span ng-bind-html="box.thumbnail"></span>
-          <span ng-bind-html="box.body"></span>
-        </div>
-      </div>
+    <div class="box">
+      <span ng-bind-html="page.featured.image"></span>
+    </div>
+  </div>
 
-      <div class="product box col-md-4" ng-repeat="box in page.boxes">
-        <div class="borderbox">
-          <h4>{{box.title}}</h4>
-          <span ng-bind-html="box.thumbnail"></span>
-          <span ng-bind-html="box.body"></span>
-        </div>
-      </div>
-
-      <div class="fact box borderbox col-md-4">
-        <h3>Packaging is</h3><br><h1>100%</h1><br><h3>compostable.</h3>
-      </div>
-
-      <div class="fact two box borderbox col-md-4">
-        <h3>Aquaponics plants take about</h3><h1>50% </h1><h4>time to grow</h4><h3>as compared to<br>plants in soil.</h3>
-      </div>
-
-      <div class="fact three box borderbox col-md-4">
-        <h1>Pesticide,<br>herbicide,<br>&<br>fungicide free product.</h1>
-      </div>
-
-      <div class="fact four box borderbox col-md-4">
-        <h3>Water consumption reduced by about</h3><h1>90%</h1><h3>of conventional farming methods.</h3>
-      </div>
-
-      <div class="fact five box borderbox col-md-4">
-        <h1>Economically, socially,<br>&<br> environmentally <h4>responsible.</h4></h1>
-      </div>
+  <div class="product box col-md-4" ng-repeat="box in page.boxes">
+    <div class="borderbox">
+      <h4>{{box.title}}</h4>
+      <span ng-bind-html="box.thumbnail"></span>
+      <span ng-bind-html="box.summary"></span>
+    </div>
+  </div>

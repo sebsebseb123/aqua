@@ -1,12 +1,12 @@
-;'use strict';
+'use strict';
 
 angular.module('getter.directives', [])
   .factory('getter', ['$http', 'localStorageService', function ($http, localStorageService) {
     return {
       getData: function($scope, type) {
         // Check for a type.
-        if (type == undefined) {
-          console.warn("type == undefined | You're trying to get data, but haven't defined what type.");
+        if (type === undefined) {
+          console.warn('type == undefined | You\'re trying to get data, but haven\'t defined what type.');
           return;
         }
 
@@ -20,16 +20,24 @@ angular.module('getter.directives', [])
           'products': {
             'url': 'http://dev-aquagreens.gotpantheon.com/api/products.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
-              // Check for empty thumbnails.
               for (var i = data.length - 1; i >= 0; i--) {
+                // Check for empty images.
                 if (typeof data[i].thumbnail !== 'string') {
                   data[i].thumbnail = '';
                 }
-              };
+                if (typeof data[i].image !== 'string') {
+                  data[i].image = '';
+                }
+              }
+
+              // Pop first to feature it.
+              var featured = data[0];
+              data.shift();
 
               // Reset pageData object, then set it up.
               pageData = {};
               pageData.boxes = data;
+              pageData.featured = featured;
               // Then return it.
               return pageData;
             }
@@ -40,7 +48,7 @@ angular.module('getter.directives', [])
               // Reset pageData object, then set it up.
               pageData = {};
               pageData = data[0];
-              pageData.vimeo = "http://player.vimeo.com/video/" + pageData.vimeo;
+              pageData.vimeo = 'http://player.vimeo.com/video/' + pageData.vimeo;
 
               // Then return it.
               return pageData;
@@ -52,7 +60,6 @@ angular.module('getter.directives', [])
               // Reset pageData object, then set it up.
               pageData = {};
               pageData.body = data[0].body;
-              pageData.steps = data[0].field_steps.split('&lt;&lt;&gt;&gt;');
               // Then return it.
               return pageData;
             }
@@ -69,7 +76,7 @@ angular.module('getter.directives', [])
               // Compare to cached, and set if needed.
               var cachedPageData = localStorageService.get(type);
 
-              if (JSON.stringify(cachedPageData) != JSON.stringify(pageData)) {
+              if (JSON.stringify(cachedPageData) !== JSON.stringify(pageData)) {
                 localStorageService.add(type, pageData);
                 $scope.$emit('dataLoaded', pageData);
               }
@@ -88,6 +95,6 @@ angular.module('getter.directives', [])
           getJson();
         }
       }
-    }
-  }])
-;
+    };
+  }]
+);
