@@ -13,9 +13,10 @@
   </div>
 
   <div class="product box col-md-4" ng-repeat="box in page.boxes">
-    <div class="borderbox">
+    <div class="borderbox" ng-click="switchFeatured($index)">
       <h4>{{box.title}}</h4>
       <span ng-bind-html="box.thumbnail"></span>
       <span ng-bind-html="box.summary"></span>
+      <span class="more pull-right"><a>more</a></span>
     </div>
   </div>
