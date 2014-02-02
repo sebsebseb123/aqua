@@ -35,9 +35,10 @@
 
 .mission {
   border: none;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Alegreya Sans", sans-serif;
+  // font-family: 'Roboto Slab', serif;
+  margin-bottom: 30px;
   min-height: 300px;
-  transition: all 3s;
   h1{
     margin: 0px;
     margin-bottom: 20px;
@@ -50,19 +51,18 @@
     line-height: 32px;
     font-weight: 200;
   }
-  p{
+  p {
+    font-weight: 300;
     padding: 0px;
   }
-  ul{
+  ul {
     padding-left: 0px;
-    li{
-      list-style: none;
-      display: inline;
+    li {
+      color: #777;
       float: left;
-      text-indent: none;
-      font-weight: bold;
       font-size: 16px;
-      color: #666;
+      font-weight: bold;
+      list-style: none;
       padding-right: 20px;
       text-transform: uppercase;
     }
