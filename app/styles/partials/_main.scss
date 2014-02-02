@@ -1,13 +1,19 @@
-body{
+body {
   padding-top: 40px;
   font-family:"Alegreya Sans", sans-serif;
 }
 
 .wrapper {
-  width: 960px;
   margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
 }
-p{
+
+.row {
+  margin: 0;
+}
+
+p {
   font-size: 15px;
   color:#333;
 }
@@ -53,13 +59,14 @@ h5{
 
 .line {
   background-image: url('images/lines.png');
-  height: 17px;
+  height: 11px;
+  margin-top: 30px;
 }
 
 /**
  * Header
  */
-header {
+ header {
   margin-bottom: 40px;
 }
 
@@ -67,16 +74,14 @@ header {
  * Logo
  */
 .logo a img{
-  float: left;
-  max-height: 100px;
-  max-width: 350px;
-  padding-right: 100px;
+  max-width: 250px;
+  width: 100%;
 }
 
 /**
  * Menu
  */
-nav.menu{
+ nav.menu{
   padding: 0px;
 }
 
@@ -111,27 +116,66 @@ body.team .nav a.team {
 /**
  * Content
  */
-.content{
+ .content{
   padding-top: 30px;
 }
 
 /**
  * Footer
  */
-footer {
-  padding-top: 10px;
+ footer {
   background-color: #424242;
+  margin-top: 30px;
   padding-bottom: 10px;
-}
-.grown{
-  height: 65px;
-  max-width: 150px;
-}
-.copyright{
-  font-family:"Alegreya Sans", sans-serif;
-  text-align: center;
-  font-size: 12px;
-  color: #888;
-  list-style-type: none;
-}
+  padding-top: 10px;
+  .social-media {
+    margin-top: 20px;
+    padding-left: 20px;
+    .fa {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 18px;
+      margin-right: 5px;
+      width: 20px;
+    }
+    .btn {
+      color: #DDD;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 15px;
+      padding: 0;
+    }
+  }
 
+  .slogan {
+    margin-top: 10px;
+    text-align: center;
+    img {
+      max-height: 80px;
+    }
+    h3 {
+      color: #EEE;
+      font-size: 32px;
+      font-weight: 100;
+      text-align: center;
+    }
+  }
+
+  .copyright{
+    font-family:"Alegreya Sans", sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    list-style-type: none;
+  }
+
+  .logo {
+    margin-top: 20px;
+    text-align: center;
+    img {
+      float: none;
+      padding: 0;
+      height: 45px;
+    }
+  }
+}

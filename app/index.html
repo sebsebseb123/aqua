@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 
   <!-- build:css({.tmp,app}) styles/main.css -->
@@ -33,14 +33,14 @@
 
     <!-- Header/Menu -->
     <header class="row">
-      <div class="col-md-4 logo">
-        <a href="">
+      <div class="col-md-4 col-xs-4 logo">
+        <a href="/">
           <img src="images/logo-full.png" alt="AquaGreens">
         </a>
       </div>
 
       <!--Menu-->
-      <nav class="col-md-8 menu">
+      <nav class="col-md-8 col-xs-8 menu">
         <ul class="nav nav-pills pull-right">
           <li><a class="products" href="products">Products</a></li>
           <li><a class="sustainability" href="sustainability">Sustainability</a></li>
@@ -58,30 +58,41 @@
 
     <!--Footer-->
     <footer class="row">
-      <div class="logo col-md-3">
-        <a href="https://www.aquagreens.com/" class="image">
-          <img src="images/logo-icon.png" alt="AquaGreens">
-        </a>
+      <div class="social-media col-md-3 col-xs-3">
+        <div>
+          <a href="https://www.facebook.com/pages/AquaGreens" target="_blank" class="btn btn-social-icon btn-facebook-square">
+            <i class="fa fa-facebook-square"></i>
+            /AquaGreens
+          </a>
+          <br />
+          <a href="https://twitter.com/AquaGreens_" target="_blank" class="btn btn-social-icon btn-twitter">
+            <i class="fa fa-twitter"></i>
+            @AquaGreens_
+          </a>
+          <br />
+          <a href="mailto:info@aquagreens.com" target="_blank" class="btn btn-social-icon btn-email">
+            <i class="fa fa-envelope"></i>
+            info@aquagreens.com
+          </a>
+          <br />
+          <a href="tel:416.689.8280" target="_blank" class="btn btn-social-icon btn-phone">
+            <i class="fa fa-phone"></i>
+            416.689.8280
+          </a>
+        </div>
       </div>
-      <div class="slogan col-md-6">
-        <h2>Passionately dedicated to connecting people and communities with healthy, sustainable, delicious food through aquaponics.</h2>
+      <div class="slogan col-md-6 col-xs-6">
+        <img src="images/logo-icon.png" alt="AquaGreens" />
+        <h3>Local. Sustainable. Organics.</h3>
       </div>
-      <div class="social-media col-md-3">
-        <ul>
-          <li class="btn-facebook"><a href="https://www.facebook.com/pages/Aqua-Greens/202610046584344" class="image">Facebook</a></li>
-          <li class="btn-twitter"><a href="https://twitter.com/AquaGreens_" class="image">Twitter</a></li>
-        </ul>
-        <ul>
-          <li><a>info@aquagreens.com</a></li>
-        </ul>
-         <ul>
-          <li><a>info@aquagreens.com</a></li>
-        </ul>
-         <div>
-        <ul class="col-md-12 copyright">
-          <img class="grown" src="images/grownto.png" alt="Grown in Toronto">
-        </ul>
+      <div class="logo col-md-3 col-xs-3">
+        <span class="grown">
+          <img src="images/grownto.svg" alt="Grown in Toronto" />
+        </span>
       </div>
+
+      <div class="col-md-12 col-xs-12 copyright">
+        &copy;2014 AquaGreens
       </div>
     </footer>
 
