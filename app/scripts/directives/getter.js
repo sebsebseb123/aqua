@@ -55,11 +55,11 @@ angular.module('getter.directives', [])
             }
           },
           'team': {
-            'url': 'http://designbykubo.com/_drupal/steps?callback=JSON_CALLBACK',
+            'url': 'http://dev-aquagreens.gotpantheon.com/api/team.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.body = data[0].body;
+              pageData = data[0];
               // Then return it.
               return pageData;
             }

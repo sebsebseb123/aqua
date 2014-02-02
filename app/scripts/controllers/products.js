@@ -14,5 +14,5 @@ angular.module('aquagreensApp')
     // Add functionality to switch
     $scope.switchFeatured = function(index) {
       $scope.page.featured = $scope.page.boxes[index];
-    }
+    };
   }]);
