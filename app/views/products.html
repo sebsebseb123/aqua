@@ -17,6 +17,6 @@
       <h4 ng-show="box.type == 'product'">{{box.title}}</h4>
       <span ng-bind-html="box.thumbnail"></span>
       <span ng-bind-html="box.summary"></span>
-      <span class="more pull-right"><a>more</a></span>
+      <span ng-show="box.type == 'product'" class="more pull-right"><a>more</a></span>
     </div>
   </div>

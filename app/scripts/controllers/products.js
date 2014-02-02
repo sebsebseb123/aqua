@@ -13,6 +13,8 @@ angular.module('aquagreensApp')
 
     // Add functionality to switch
     $scope.switchFeatured = function(index) {
-      $scope.page.featured = $scope.page.boxes[index];
+      if ($scope.page.boxes[index].type == 'product') {
+        $scope.page.featured = $scope.page.boxes[index];
+      }
     };
   }]);
