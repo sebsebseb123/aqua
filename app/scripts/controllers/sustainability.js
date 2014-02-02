@@ -7,7 +7,6 @@ angular.module('aquagreensApp')
       // Set vimeo URL as a trusted resource.
       pageData.vimeo = $sce.trustAsResourceUrl(pageData.vimeo);
       $scope.page = pageData;
-      console.log($scope.page);
     });
 
     // Get data, and fire event when ready.

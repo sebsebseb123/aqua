@@ -34,9 +34,17 @@ angular.module('getter.directives', [])
               var featured = data[0];
               data.shift();
 
+              // Create indexed object.
+              var boxes = {};
+              for (i = data.length - 1; i >= 0; i--) {
+                if (data[i].type === 'product') {
+                  var path = data[i].title.toLowerCase().trim().replace(' ', '-');
+                  boxes[path + ''] = data[i];
+                }
+              }
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.boxes = data;
+              pageData.boxes = boxes;
               pageData.featured = featured;
               // Then return it.
               return pageData;
