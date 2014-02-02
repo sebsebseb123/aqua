@@ -1,18 +1,46 @@
 .box {
   margin-bottom: 30px;
-  h4{
-    padding-top: 20px;
+  min-height: 300px;
+  position: relative;
+  transition: all 3s;
+  h4 {
     padding-bottom: 10px;
   }
-  p{
-    padding: 20px;
+  p {
     font-weight: 200;
+  }
 
-  } 
-}  
+  .borderbox{
+    height: 350px;
+    border: 1px solid #C8C8C8;
+    max-height: 100%;
+    padding: 20px;
+  }
 
-.box.mission{
+  .more {
+    bottom: 10px;
+    position: absolute;
+    right: 30px;
+  }
+
+  &.product{
+    cursor: pointer;
+    img{
+      height: 120px;
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+  }
+}
+
+.mission {
   border: none;
+  h1{
+    margin: 0px;
+    margin-bottom: 20px;
+  }
   h2 {
     padding: 0px;
     font-size: 22px;
@@ -24,7 +52,7 @@
   }
   p{
     padding: 0px;
-  } 
+  }
   ul{
     padding-left: 0px;
     li{
@@ -39,38 +67,12 @@
       text-transform: uppercase;
     }
   }
-}
-
-.box.mission h1{
-  margin: 0px;
-  margin-bottom: 20px;
-}
-
-.borderbox{
-  height: 350px;
-  border: 1px solid #C8C8C8;
-  max-height: 100%;
-}
-
-.product{
-  .product p {
-    font-size: 15px;
-    text-align:left;
-    line-height: 22px;
-    letter-spacing: 1px;
-  }
-  img{
-    height: 120px; 
+  .image img {
+    height: auto;
+    max-height: 280px;
+    max-width: 280px;
     width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
   }
-}
-
-.more {
-  margin-right: 30px;
-  margin-bottom: 20px;
 }
 
 .borderbox.box.fact{
@@ -80,96 +82,95 @@
 }
 
 .fact{
- h1{
-  text-align: center;
-  letter-spacing: 4px;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 200;
-}
-h3{
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 36px;
-  line-height: 50px;
-  font-weight: 100;
-}
-}
-
-.fact.two{
- h1{
-  text-align: center;
-  letter-spacing: 4px;
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: 200;
-  color: #5D9D43;
-}
-h3{
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 26px;
-  line-height: 30px;
-  font-weight: 100;
-}
-h4{
-  font-size: 32px;
-  line-height: 40px;
-  text-align:center;
-  color: #5D9D43;
-  letter-spacing: 1px;
-  font-weight: 200;
-}
+  h1{
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 200;
+  }
+  h3{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 100;
+  }
 }
 
-.fact.three{
- h1{
-  text-align: center;
-  letter-spacing: 4px;
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: 100;
-  color: #333;
-}
-}
+.feature {
+  h2,
+  h3,
+  h4,
+  h5{
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  &.Economically,
+  &.Faster,
+  &.Packaging,
+  &.Pesticide,
+  &.Water {
+    .borderbox {
+      padding-top: 40px;
+    }
+    h3{
+      letter-spacing: 4px;
+      font-size: 60px;
+      font-weight: 200;
+      color: #2E93BE;
+      margin: 50px 0;
+    }
+    h4{
+      letter-spacing: 1px;
+      font-size: 36px;
+    }
+  }
 
-.fact.four{
- h1{
-  text-align: center;
-  letter-spacing: 4px;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 200;
-}
-h3{
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 100;
-}
-}
+  &.Faster {
+    .borderbox {
+      padding-top: 30px;
+    }
+    h3{
+      font-size: 30px;
+      color: #5D9D43;
+    }
+    h4{
+      font-size: 26px;
+    }
+  }
 
-.fact.five{
- h1{
-  text-align: center;
-  letter-spacing: 4px;
-  font-size: 35px;
-  line-height: 40px;
-  font-weight: 100;
-  color: #333;
-}
-h4{
-  text-align: center;
-  letter-spacing: 4px;
-  font-size: 45px;
-  line-height: 50px;
-  font-weight: 200;
-  color: #5D9D43;
-}
-}
+  &.Water {
+    .borderbox {
+      padding-top: 30px;
+    }
+    h3{
+      margin: 30px 0;
+    }
+    h4{
+      font-size: 26px;
+    }
+  }
 
-.bg{
-  background-image: ('apps/images/bg.png');
-}
+  &.Pesticide {
+    .borderbox {
+      padding-top: 15px;
+    }
+    h4{
+      font-size: 42px;
+      line-height: 54px;
+    }
+  }
 
+  &.Economically{
+    .borderbox {
+      padding-top: 40px;
+    }
+    h4{
+      font-size: 30px;
+      line-height: 54px;
+    }
+  }
+}

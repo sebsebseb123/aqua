@@ -102,6 +102,12 @@ nav.menu{
   background-color: #fff;
 }
 
+body.products .nav a.products,
+body.sustainability .nav a.sustainability,
+body.team .nav a.team {
+  color:#2E93BE;
+}
+
 /**
  * Content
  */
