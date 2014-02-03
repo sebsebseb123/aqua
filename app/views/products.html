@@ -1,6 +1,6 @@
 <div class="row mission">
-  <div class="col-md-8 col-xs-12">
-    <span ng-bind-html="page.featured.image" class="visible-xs col-xs-4 pull-right responsive-image"></span>
+  <div class="col-md-8 col-sm-12 col-xs-12">
+    <span ng-bind-html="page.featured.image" class="visible-xs visible-sm col-xs-4 col-sm-4 pull-right responsive-image"></span>
     <h1>{{page.featured.title}}</h1>
     <span ng-bind-html="page.featured.body"></span>
     <ul>
@@ -8,12 +8,12 @@
     </ul>
   </div>
 
-  <div class="image col-md-4 hidden-xs">
+  <div class="image col-md-4 hidden-xs hidden-sm">
     <span ng-bind-html="page.featured.image"></span>
   </div>
 </div>
 
-  <div class="box col-md-4 col-xs-6" ng-repeat="box in page.boxes | object2Array | orderBy:'num'" ng-class="[box.type, box.title]">
+  <div class="box col-md-4 col-sm-6 col-xs-6" ng-repeat="box in page.boxes | object2Array | orderBy:'num'" ng-class="[box.type, box.title]">
     <div class="borderbox" ng-click="switchFeatured(box.path)">
       <h4 ng-show="box.type == 'product'">{{box.title}}</h4>
       <span ng-bind-html="box.thumbnail"></span>
