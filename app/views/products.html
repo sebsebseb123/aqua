@@ -13,7 +13,7 @@
   </div>
 </div>
 
-  <div class="box col-md-4 col-xs-6" ng-repeat="box in page.boxes" ng-class="[box.type, box.title]">
+  <div class="box col-md-4 col-xs-6" ng-repeat="box in page.boxes | object2Array | orderBy:'num'" ng-class="[box.type, box.title]">
     <div class="borderbox" ng-click="switchFeatured(box.path)">
       <h4 ng-show="box.type == 'product'">{{box.title}}</h4>
       <span ng-bind-html="box.thumbnail"></span>

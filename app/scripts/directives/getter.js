@@ -1,6 +1,15 @@
 'use strict';
 
 angular.module('getter.directives', [])
+  .filter('object2Array', function() {
+    return function(input) {
+      var out = [];
+      for(var i in input){
+        out.push(input[i]);
+      }
+      return out;
+    };
+  })
   .factory('getter', ['$http', 'localStorageService', function ($http, localStorageService) {
     return {
       getData: function($scope, type) {
@@ -39,8 +48,10 @@ angular.module('getter.directives', [])
               for (i = data.length - 1; i >= 0; i--) {
                 var path = data[i].title.toLowerCase().trim().replace(' ', '-');
                 data[i].path = path;
+                data[i].num = i;
                 boxes[path + ''] = data[i];
               }
+
               // Reset pageData object, then set it up.
               pageData = {};
               pageData.boxes = boxes;
