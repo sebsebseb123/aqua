@@ -360,20 +360,20 @@ module.exports = function (grunt) {
       }
     },
 
-    'ftp-deploy-1and1': {
-      build: {
-        auth: {
-          host: 'sebsebseb123.com',
-          port: 21,
-          authKey: 'key1'
-        },
-        src: '<%= yeoman.dist %>',
-        dest: '.',
-        exclusions: ['.DS_Store', 'Thumbs.db', 'bower_components']
-      }
-    }
+    // 'ftp-deploy-1and1': {
+    //   build: {
+    //     auth: {
+    //       host: 'sebsebseb123.com',
+    //       port: 21,
+    //       authKey: 'key1'
+    //     },
+    //     src: '<%= yeoman.dist %>',
+    //     dest: '.',
+    //     exclusions: ['.DS_Store', 'Thumbs.db', 'bower_components']
+    //   }
+    // },
 
-    'ftp-deploy-godaddy': {
+    'ftp-deploy': {
       build: {
         auth: {
           host: 'ftp.aquagreens.ca',
@@ -431,14 +431,14 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('1and1', [
-    'build',
-    'ftp-deploy-1and1'
-  ]);
+  // grunt.registerTask('1and1', [
+  //   'build',
+  //   'ftp-deploy-1and1'
+  // ]);
 
   grunt.registerTask('godaddy', [
     'build',
-    'ftp-deploy-godaddy'
+    'ftp-deploy'
   ]);
 
   grunt.registerTask('default', [
