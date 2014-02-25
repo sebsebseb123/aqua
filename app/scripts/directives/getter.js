@@ -27,7 +27,7 @@ angular.module('getter.directives', [])
         // Set config object, with urls and parsers.
         var config = {
           'products': {
-            'url': 'http://dev-aquagreens.gotpantheon.com/api/products.jsonp?callback=JSON_CALLBACK',
+            'url': 'http://aquagreens.ca/_drupal/api/products.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
               for (var i = data.length - 1; i >= 0; i--) {
                 // Check for empty images.
@@ -61,7 +61,7 @@ angular.module('getter.directives', [])
             }
           },
           'sustainability': {
-            'url': 'http://dev-aquagreens.gotpantheon.com/api/sustainability.jsonp?callback=JSON_CALLBACK',
+            'url': 'http://aquagreens.ca/_drupal/api/sustainability.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
@@ -73,7 +73,7 @@ angular.module('getter.directives', [])
             }
           },
           'team': {
-            'url': 'http://dev-aquagreens.gotpantheon.com/api/team.jsonp?callback=JSON_CALLBACK',
+            'url': 'http://aquagreens.ca/_drupal/api/team.jsonp?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
